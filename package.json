@@ -1,0 +1,14 @@
+{
+  "name": "hashit",
+  "version": "1.0.0",
+  "description": "Hash the output of a given string along with SAP community ID",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Dhananjay Hegde",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
