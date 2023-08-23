@@ -13,6 +13,20 @@ exports.getHashForString = async (stringValue) => {
     return data
 }
 
+exports.getHashForStringForUser = async (stringValue, user) => {
+
+    const encodedString = encodeURIComponent(stringValue)    
+    const response = await fetch(`https://developer-challenge.cfapps.eu10.hana.ondemand.com/v1/hash(value='${encodedString}')`, {
+        headers: {
+            "CommunityID": user,
+            "Accept": "application/json"
+        }
+    })
+
+    const data = await response.text()
+    return data
+}
+
 /**
  * 
  * @param {Callback function that is called to get the value to be hashed} valueProviderCallback 
